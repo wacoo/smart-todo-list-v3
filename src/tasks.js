@@ -7,7 +7,14 @@ class Tasks {
   addTask(task) {
     this.taskCollection.push(task);
     this.index += 1;
-    this.storeData();
+  }
+
+  editTask(desc, idx) {
+    this.taskCollection[idx].description = desc;
+  }
+
+  updateCompleted(newStatus, idx) {
+    this.taskCollection[idx].completed = newStatus;
   }
 
   removeTask(idx) {
@@ -17,7 +24,16 @@ class Tasks {
       this.taskCollection[j].index = j;
       this.index += 1;
     }
-    this.storeData();
+  }
+
+  removeAllCompleted = () => {
+    for (let i = 0; i < this.taskCollection.length; i += 1) {
+      const tsk = this.taskCollection[i];
+      if (tsk.completed) {
+        this.removeTask(i);
+        i -= 1;
+      }
+    }
   }
 
   storeData() {
