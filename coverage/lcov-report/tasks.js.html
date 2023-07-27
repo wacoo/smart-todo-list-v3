@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28% </span>
+                <span class="strong">48% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/25</span>
+                <span class='fraction'>12/25</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.81% </span>
+                <span class="strong">45.45% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/22</span>
+                <span class='fraction'>10/22</span>
             </div>
         
             
@@ -117,33 +117,33 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -178,20 +178,20 @@
     this.index += 1;
   }
 &nbsp;
-  editTask(desc, idx) {
-    this.taskCollection[idx].description = desc;
+<span class="fstat-no" title="function not covered" >  ed</span>itTask(desc, idx) {
+<span class="cstat-no" title="statement not covered" >    this.taskCollection[idx].description = desc;</span>
   }
 &nbsp;
-  updateCompleted(newStatus, idx) {
-    this.taskCollection[idx].completed = newStatus;
+<span class="fstat-no" title="function not covered" >  up</span>dateCompleted(newStatus, idx) {
+<span class="cstat-no" title="statement not covered" >    this.taskCollection[idx].completed = newStatus;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>moveTask(idx) {
-<span class="cstat-no" title="statement not covered" >    this.taskCollection = this.taskCollection.filter(<span class="fstat-no" title="function not covered" >(t</span>sk) =&gt; <span class="cstat-no" title="statement not covered" >tsk.index !== idx)</span>;</span>
-<span class="cstat-no" title="statement not covered" >    this.index = 0;</span>
-<span class="cstat-no" title="statement not covered" >    for (let j = <span class="cstat-no" title="statement not covered" >0;</span> j &lt; this.taskCollection.length; j += 1) {</span>
-<span class="cstat-no" title="statement not covered" >      this.taskCollection[j].index = j;</span>
-<span class="cstat-no" title="statement not covered" >      this.index += 1;</span>
+  removeTask(idx) {
+    this.taskCollection = this.taskCollection.filter((tsk) =&gt; tsk.index !== idx);
+    this.index = 0;
+    for (let j = 0; j &lt; this.taskCollection.length; j += 1) {
+      this.taskCollection[j].index = j;
+      this.index += 1;
     }
   }
 &nbsp;
@@ -226,7 +226,7 @@ export default new Tasks();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-27T13:10:09.222Z
+                at 2023-07-27T13:29:12.649Z
             </div>
         <script src="prettify.js"></script>
         <script>
