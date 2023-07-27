@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development"

@@ -16,4 +16,12 @@ describe('Test add and remove tasks', () => {
         task.addTask(tsk1);
         expect(task.taskCollection[0].description).toBe(description);
     });
+    test('test task.removeTask()', () => {
+        tsk2.index = 2;
+        tsk2.description = description2;
+        tsk2.completed = false;
+        task.addTask(tsk2);
+        task.removeTask(1);
+        expect(task.taskCollection.length).toBe(1);
+    });
 });
