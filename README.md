@@ -85,7 +85,7 @@ Overall, Smart Todo List is a versatile tool that can help you stay organized an
 <!-- LIVE DEMO  -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Click <a href="https://wacoo.github.io/smart-todo-list/dist/index.html">here</a> to open the live demo.
+- Click <a href="https://wacoo.github.io/smart-todo-list-v3/dist/index.html">here</a> to open the live demo.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Project Presentation <a name="presentation"></a>
@@ -96,7 +96,7 @@ Overall, Smart Todo List is a versatile tool that can help you stay organized an
 
 ## 💻 Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.
-- Clone the repository: <a href="https://github.com/wacoo/smart-todo-list">here</a>
+- Clone the repository: <a href="https://github.com/wacoo/smart-todo-list-v3">here</a>
 - From the project's directory, run `npm install` to install all the reqirements.
 - Run `npm run start` to start the application. 
 
