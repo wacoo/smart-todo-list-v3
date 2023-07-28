@@ -60,9 +60,9 @@ describe('Test edit and remove tasks functions', () => {
     task.removeAllCompleted();
     let completedCount = 0;
     task.taskCollection.forEach((ts) => {
-        if(ts.completed === true) {
-            completedCount += 1;
-        }
+      if (ts.completed === true) {
+        completedCount += 1;
+      }
     });
     expect(completedCount).toBe(0);
   });
