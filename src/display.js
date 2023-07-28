@@ -118,15 +118,13 @@ class Display {
   addCheckEventListener(chk, tsk, idx) {
     chk.addEventListener('change', () => {
       if (chk.checked) {
-        tasks.taskCollection[idx].completed = true;
+        tasks.updateCompleted(true, idx);
         tsk.classList.add('strike');
         this.populatePage();
-        tasks.storeData();
       } else {
-        tasks.taskCollection[idx].completed = false;
+        tasks.updateCompleted(false, idx);
         tsk.classList.remove('strike');
         this.populatePage();
-        tasks.storeData();
       }
     });
   }
@@ -159,13 +157,16 @@ class Display {
       if (tsk.id !== 'desc') {
         const task = new OneTask();
         task.description = input.value;
+        if (tsk.classList.parentNode) {
+          tsk.classList.parentNode.remove('yellow');
+          tsk.classList.remove('yellow');
+        }
         task.completed = false;
         task.index = tasks.index;
         tasks.addTask(task);
       } else {
-        tasks.taskCollection[id].description = tsk.value;
+        tasks.editTask(tsk.value, id);
       }
-      tasks.storeData();
       this.populatePage();
     }
   }
@@ -176,6 +177,8 @@ class Display {
     const tsk = this.returnSiblingwithClass(input, 'desc');
     elipse.addEventListener('click', () => {
       tsk.disabled = false;
+      tsk.parentNode.classList.add('yellow');
+      tsk.classList.add('yellow');
       can.style.display = 'block';
       elipse.style.display = 'none';
     });
@@ -201,19 +204,9 @@ class Display {
     return null;
   };
 
-  removeAllCompleted = () => {
-    for (let i = 0; i < tasks.taskCollection.length; i += 1) {
-      const tsk = tasks.taskCollection[i];
-      if (tsk.completed) {
-        tasks.removeTask(i);
-        i -= 1;
-      }
-    }
-  };
-
   clearButtonListener(btnClear) {
     btnClear.addEventListener('click', () => {
-      this.removeAllCompleted();
+      tasks.removeAllCompleted();
       this.populatePage();
     });
   }

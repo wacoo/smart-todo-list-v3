@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development"
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.8.1",
     "eslint": "^7.32.0",
@@ -20,6 +21,8 @@
     "eslint-plugin-import": "^2.27.5",
     "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.2",
     "lodash": "^4.17.21",
     "style-loader": "^3.3.3",
     "stylelint": "^13.13.1",
@@ -29,5 +32,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
