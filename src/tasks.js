@@ -7,14 +7,17 @@ class Tasks {
   addTask(task) {
     this.taskCollection.push(task);
     this.index += 1;
+    this.storeData(this.taskCollection);
   }
 
   editTask(desc, idx) {
     this.taskCollection[idx].description = desc;
+    this.storeData(this.taskCollection);
   }
 
   updateCompleted(newStatus, idx) {
     this.taskCollection[idx].completed = newStatus;
+    this.storeData(this.taskCollection);
   }
 
   removeTask(idx) {
@@ -24,6 +27,7 @@ class Tasks {
       this.taskCollection[j].index = j;
       this.index += 1;
     }
+    this.storeData(this.taskCollection);
   }
 
   removeAllCompleted = () => {
@@ -34,10 +38,11 @@ class Tasks {
         i -= 1;
       }
     }
+    this.storeData(this.taskCollection);
   }
 
-  storeData() {
-    const strData = JSON.stringify(this.taskCollection);
+  storeData = (data) => {
+    const strData = JSON.stringify(data);
     localStorage.setItem('data', strData);
   }
 

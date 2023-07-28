@@ -121,12 +121,10 @@ class Display {
         tasks.updateCompleted(true, idx);
         tsk.classList.add('strike');
         this.populatePage();
-        tasks.storeData();
       } else {
         tasks.updateCompleted(false, idx);
         tsk.classList.remove('strike');
         this.populatePage();
-        tasks.storeData();
       }
     });
   }
@@ -159,14 +157,16 @@ class Display {
       if (tsk.id !== 'desc') {
         const task = new OneTask();
         task.description = input.value;
+        if (tsk.classList.parentNode) {
+          tsk.classList.parentNode.remove('yellow');
+          tsk.classList.remove('yellow');
+        }
         task.completed = false;
         task.index = tasks.index;
         tasks.addTask(task);
-        tasks.storeData();
       } else {
         tasks.editTask(tsk.value, id);
       }
-      tasks.storeData();
       this.populatePage();
     }
   }
@@ -177,13 +177,14 @@ class Display {
     const tsk = this.returnSiblingwithClass(input, 'desc');
     elipse.addEventListener('click', () => {
       tsk.disabled = false;
+      tsk.parentNode.classList.add('yellow');
+      tsk.classList.add('yellow');
       can.style.display = 'block';
       elipse.style.display = 'none';
     });
 
     can.addEventListener('click', () => {
       tasks.removeTask(parseInt(can.id, 10));
-      tasks.storeData();
       this.populatePage();
     });
   }
@@ -206,7 +207,6 @@ class Display {
   clearButtonListener(btnClear) {
     btnClear.addEventListener('click', () => {
       tasks.removeAllCompleted();
-      tasks.storeData();
       this.populatePage();
     });
   }
