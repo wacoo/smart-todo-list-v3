@@ -110,7 +110,7 @@ In order to run this project you need:
 Clone the repository to desired directory on local computer.
 > `git clone https://github.com/wacoo/smart-todo-list-v3`
 
-> `cd smart-todo-list`
+> `cd smart-todo-list-v3`
 
 > `npm install`
 
