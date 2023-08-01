@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="src/images/s_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Smart Toto List</b></h3>
+  <h3><b>Smart Todo List</b></h3>
 
 </div>
 
@@ -56,9 +56,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION  -->
 
-# 📖 Smart Toto List <a name="about-project"></a>
+# 📖 Smart Todo List <a name="about-project"></a>
 
-**Smart Toto List** is a powerful yet simple web-based application designed to help you manage your daily tasks and stay on top of your schedule. With its user-friendly interface, you can easily add, remove, and mark tasks as complete, as well as remove all completed tasks with just a click of a button. 
+**Smart Todo List** is a powerful yet simple web-based application designed to help you manage your daily tasks and stay on top of your schedule. With its user-friendly interface, you can easily add, remove, and mark tasks as complete, as well as remove all completed tasks with just a click of a button. 
 
 The application has been designed to be easy to use, with a clean and intuitive interface that allows you to quickly add new tasks and manage existing ones. Whether you're a busy professional, a student, or a stay-at-home parent, Smart Todo List makes it easy to keep track of your tasks and stay organized.
 
